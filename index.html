@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuehao Li | Computer Engineer</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Colors */
+    :root {
+      --primary-color: #0073e6;
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --footer-bg-color: #333;
+      --footer-text-color: #f5f5f5;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      animation: fadeInUp 1s ease-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+    }
+    header p {
+      color: #666;
+    }
+    header a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      transition: color 0.3s, transform 0.3s;
+    }
+    header a:hover {
+      color: #005bb5;
+      transform: scale(1.1);
+    }
+
+    /* Section Styling */
+    section {
+      margin-top: 2rem;
+      opacity: 0; /* Start invisible */
+      animation: fadeInUp 1s ease-out forwards;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    #about { animation-delay: 0.5s; }
+    #education { animation-delay: 1s; }
+    #experience { animation-delay: 1.5s; }
+    #projects { animation-delay: 2s; }
+    #skills { animation-delay: 2.5s; }
+
+    /* Project Card Animation */
+    .project {
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    .project:nth-child(1) { animation-delay: 2.2s; }
+    .project:nth-child(2) { animation-delay: 2.4s; }
+
+    /* Footer Styling */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: var(--footer-bg-color);
+      color: var(--footer-text-color);
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Fade-in and slide-up animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Yuehao Li</h1>
+    <p>Computer Engineering Graduate Student</p>
+    <p><a href="mailto:yul330@ucsd.edu">yul330@ucsd.edu</a> | (831) 334-1957</p>
+    <p><a href="https://linkedin.com/in/yuehao-li" target="_blank">LinkedIn</a> | <a href="https://github.com/yuehao-li" target="_blank">GitHub</a></p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently a graduate student in Computer Engineering at UCSD, with a background in digital hardware design and verification.</p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>MS in Computer Engineering</strong></li>
+        University of California, San Diego (2024 - 2026)
+      <li><strong>BS in Computer Engineering Digital Hardware</strong></li>
+        University of California, Santa Cruz (2018 - 2022) | GPA: 3.72 / 4.0
+    </ul>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="job">
+      <h3>Software Engineer Intern, Cuddly LLC</h3>
+      <p><em>Nov. 2022 - Jul. 2023</em></p>
+      <ul>
+        <li>Onboarded tools for iOS and Android app development, database queries, and data ingestion for testing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Automatic Blinds</h3>
+      <p>Developed a circuit for automatic blinds with microcontrollers and an iOS app for remote control.</p>
+    </div>
+    <div class="project">
+      <h3>HTAX - MESI Protocol Multicore Cache Coherence</h3>
+      <p>Implemented and verified a multi-core cache coherence protocol using UVM methodology in SystemVerilog.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>C, Verilog, C++, Python, VLSI, SPICE, MIPS, LaTeX</p>
+    <p>Tools: Git, Vivado, Cadence, Xcelium, Google Sky130, Ngspice, Linux/Unix</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Yuehao Li</p>
+  </footer>
+
+</body>
+</html>
